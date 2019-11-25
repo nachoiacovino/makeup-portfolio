@@ -15,4 +15,8 @@
         text-transform: uppercase;
         font-size: 1.2rem;
     }
+    .Navbar-icon:focus, .Navbar-icon:active {
+        outline: none;
+        box-shadow: none;
+    }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import landing from './images/landing.jpg'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import './Landing.css'
@@ -12,7 +13,7 @@ export default function Landing() {
             <div class="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/contacto" className="btn btn-primary">Reserva tu cita</a>
+                <Link to="/contacto" className="btn btn-primary">Reserva tu cita</Link>
             </div>
         </div>
     )
