@@ -4,9 +4,13 @@ import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 
 export default function Navbar() {
+    const handleNavbarClose = _ => {
+        if (document.querySelector('.collapsed') === null) document.querySelector('.navbar-toggler-icon').click()
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to="/" className="navbar-brand">Marina Gómez</Link>
+            <Link onClick={handleNavbarClose} to="/" className="navbar-brand">Marina Gómez</Link>
             <button
                 className='navbar-toggler'
                 type='button'
@@ -20,11 +24,11 @@ export default function Navbar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="Navbar navbar-nav">
-                    <li className="nav-item"><NavLink to="/sobremi">Sobre mi</NavLink></li>
-                    <li className="nav-item"><NavLink to="/galeria">Galeria de fotos</NavLink></li>
-                    <li className="nav-item"><NavLink to="/servicios">Servicios de maquillaje</NavLink></li>
-                    <li className="nav-item"><NavLink to="/reservar-cita">Reserva tu cita</NavLink></li>
-                    <li className="nav-item"><NavLink to="/contacto">Contacto</NavLink></li>
+                    <li className="nav-item"><NavLink onClick={handleNavbarClose} to="/sobremi">Sobre mi</NavLink></li>
+                    <li className="nav-item"><NavLink onClick={handleNavbarClose} to="/galeria">Galeria de fotos</NavLink></li>
+                    <li className="nav-item"><NavLink onClick={handleNavbarClose} to="/servicios">Servicios de maquillaje</NavLink></li>
+                    <li className="nav-item"><NavLink onClick={handleNavbarClose} to="/reservar-cita">Reserva tu cita</NavLink></li>
+                    <li className="nav-item"><NavLink onClick={handleNavbarClose} to="/contacto">Contacto</NavLink></li>
                 </ul>
             </div>
         </nav>
