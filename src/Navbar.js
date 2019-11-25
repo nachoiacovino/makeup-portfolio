@@ -25,7 +25,7 @@ export default function Navbar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="Navbar navbar-nav">
-                {links.map(item => <li className="nav-item"><NavLink onClick={handleNavbarClose} to={item.url}>{item.text}</NavLink></li>)}
+                {links.map(item => <NavLink onClick={handleNavbarClose} to={item.url} key={item.url}><li className="nav-item">{item.text}</li></NavLink>)}
                 </ul>
             </div>
         </nav>

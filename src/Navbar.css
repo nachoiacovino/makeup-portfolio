@@ -10,10 +10,16 @@
         margin-bottom: .7vh;
         padding-left: 3vw;
     }
-    .Navbar li a {
+    .Navbar a li {
         color: white;
         text-transform: uppercase;
         font-size: 1.2rem;
+    }
+    .Navbar a li:hover {
+        background: rgb(245, 111, 131);
+    }
+    .Navbar a:hover {
+        text-decoration: none;
     }
     .Navbar-icon:focus, .Navbar-icon:active {
         outline: none;

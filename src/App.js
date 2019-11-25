@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom"
 import Navbar from './Navbar'
 import Landing from './Landing'
 import Galeria from './Galeria'
+import Contact from './Contact'
 
 export default function App() {
     return (
@@ -14,7 +15,7 @@ export default function App() {
                 <Route exact path="/galeria" component={Galeria} />
                 {/* <Route exact path="/servicios" component={Servicios} /> */}
                 {/* <Route exact path="/reservar-cita" component={ReservarCita} /> */}
-                {/* <Route exact path="/contacto" component={Contacto} /> */}
+                <Route exact path="/contacto" component={Contact} />
             </Switch>
         </div>
     )
